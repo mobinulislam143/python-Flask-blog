@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block body %}
+<!-- <header class="masthead" style="background-image: url(' {{url_for('static', filename='assets/img/home-bg.jpg')}}')">
+     
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Welcome to Dashboard</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h2>Add/Edit your post</h2>
+            <form id="editForm" action="/edit/{{sno}}" method="POST" enctype = "multipart/form-data">
+                <div>
+                    <label for="title">Title</label>
+                    <input class="form-control" id="title" value="{{post.title}}" name="title" type="text" placeholder="Title" required />
+                </div>
+                <div>
+                    <label for="content">content</label>
+                    <input type="text" class="form-control" id="content" value="{{post.content}}" name="content" type="text"  required />
+                    <!-- <textarea placeholder="Enter your content..." required ></textarea> -->
+                </div>
+                <div>
+                    <label for="slug">slug</label>
+                    <input class="form-control" id="slug" value="{{post.slug}}" name="slug" type="text" placeholder="Enter your slug..." required />
+                </div>
+                <div>
+                    <label for="img_file">Image</label>
+                    <input class="form-control" type="file" value="{{post.img_file}}" id="img_file" name="img_file"  required />
+                </div>
+                <br />
+                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit" style="cursor: pointer">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

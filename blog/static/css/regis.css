@@ -1,0 +1,23 @@
+body{
+  background: linear-gradient(#09090969, #000000e6), url(/static/assets/img/books.jpg);
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+}
+
+.containerForm {
+    position: relative;
+  }
+  .formArea {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,15%);
+    width: 22%;
+  }
+
+  .logoArea img {
+    cursor: pointer;
+    margin: 0px 0px 22px 0px;
+  }  
